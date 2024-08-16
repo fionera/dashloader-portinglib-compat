@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "dashloader-portinglib-compat",
+  "version": "${version}",
+  "name": "Dashloader Portinglib Compat",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/fionera/dashloader-portinglib-compat"
+  },
+  "license": "Apache-2.0",
+  "icon": "assets/dashloader-portinglib-compat/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "mm:early_risers": [
+      "de.fionera.dashloaderportinglibcompat.DashloaderPortinglibCompat"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
