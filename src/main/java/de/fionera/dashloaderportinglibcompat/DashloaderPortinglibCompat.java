@@ -20,7 +20,7 @@ public class DashloaderPortinglibCompat implements Runnable {
 
         String itemTransform = remapper.mapClassName("intermediary", "net.minecraft.class_804");
         ClassTinkerers.addTransformation(itemTransform, target -> {
-            MethodNode origConstructor = target.methods.getFirst();
+            MethodNode origConstructor = target.methods.get(0);
 
             MethodNode newConstructor = new MethodNode(
                     Opcodes.ASM7,
@@ -90,7 +90,7 @@ public class DashloaderPortinglibCompat implements Runnable {
                     4
             ));
 
-            target.methods.addFirst(newConstructor);
+            target.methods.add(0, newConstructor);
         });
     }
 }
